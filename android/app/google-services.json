@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1022722726981",
+    "firebase_url": "https://luckymoneyproject-e58d8-default-rtdb.firebaseio.com",
+    "project_id": "luckymoneyproject-e58d8",
+    "storage_bucket": "luckymoneyproject-e58d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022722726981:android:6e9962a891c9e37a4c172c",
+        "android_client_info": {
+          "package_name": "com.luckymoneyproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTo0h9eihvRD5EbMLefcuA_8MDnUrIz6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022722726981:android:5f3b59b9a82ff95e4c172c",
+        "android_client_info": {
+          "package_name": "com.reactnativefirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTo0h9eihvRD5EbMLefcuA_8MDnUrIz6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

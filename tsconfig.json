@@ -1,0 +1,13 @@
+{
+<<<<<<< HEAD
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017"
+  }
+}
+=======
+  "extends": "@react-native/typescript-config/tsconfig.json"
+}
+>>>>>>> b19083247395aec8135ea41e63760732b49f483b
