@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { View, Text, ImageBackground, Image, Alert } from 'react-native';
 import { FlatButton, } from '../../../component';
 // import { BACKGROUND_GODENLUCKYMONEY, MINI_BANNER } from '../../../../../assets';
-=======
-import React from 'react';
-import { View, Text, ImageBackground, Image } from 'react-native';
-import { FlatButton , } from '../../../component';
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { BACKGROUND_GODENLUCKYMONEY, MINI_BANNER } from '../../../../../assets';
 import { scaleHeight, scaleWidth, scale, HEIGHT, LightTheme, WITDH } from '../../../resource/values';
 import { RoundBackButton } from '../../../component/button/RoundBackButton';
@@ -15,7 +9,6 @@ import { styles } from './LuckeyMoney.style';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { useNavigation } from '@react-navigation/native';
-<<<<<<< HEAD
 import { RootState, joinMatchQueueAsync, AppDispatch } from '../../../shared-state';
 import { joinMatchQueueWithUserData } from '../../../../data/data-source/user/matchService';
 import { useSelector, useDispatch } from 'react-redux';
@@ -41,24 +34,13 @@ const _LuckeyMoney: React.FC = () => {
       }
     }
   };
-=======
-const _LuckeyMoney: React.FC = () => {
-
-   const navigation = useNavigation();
-
-    const handlePress = () => {
-        navigation.navigate('FindOpponents'); 
-    };
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 
   return (
     <View style={styles.background}>
       <RoundBackButton
         containerStyle={styles.buttonBack}
-<<<<<<< HEAD
         onPress={() => navigation.goBack()}
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
+
       />
       <MaskedView
         style={styles.header}
@@ -68,15 +50,10 @@ const _LuckeyMoney: React.FC = () => {
       >
         <LinearGradient
           colors={['#FCD60E', '#FFF9E1', '#FCD60E']}
-<<<<<<< HEAD
           locations={[0.06, 0.23, 0.46, 0.65, 0.83, 0.96]}
           start={{ x: 0.75, y: 1 }}
           end={{ x: 0, y: 0 }}
-=======
-          locations={[0.1, 0.3, 0.9]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
+
           style={{ flex: 1, height: '100%' }}
         />
       </MaskedView>
@@ -92,11 +69,7 @@ const _LuckeyMoney: React.FC = () => {
         <FlatButton
           title="Tìm đối thủ"
           containerStyle={styles.button}
-<<<<<<< HEAD
           onPress={handlePress}
-=======
-        onPress={handlePress}
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
         />
         <View style={styles.notebaner}>
           <Text style={[styles.text2, { color: '#FFF', textAlign: 'center' }]}>Lưu ý: Người chơi chiến thắng sẽ nhận được{` `}

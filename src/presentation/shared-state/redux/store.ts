@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {authenticationReducer , userReducer,  matchQueueReducer, gameRoomReducer } from './reducers';
+import {authenticationReducer , userReducer,  matchQueueReducer, gameRoomReducer , loadingReducer} from './reducers';
 
 const store = configureStore({
   reducer: {
@@ -8,6 +8,7 @@ const store = configureStore({
     // reward: rewardReducer,
     matchQueue: matchQueueReducer,
     gameRoom: gameRoomReducer,
+    loading: loadingReducer,
   },
 });
 

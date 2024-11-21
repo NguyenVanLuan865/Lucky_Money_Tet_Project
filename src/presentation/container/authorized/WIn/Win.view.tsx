@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { View, Text, ImageBackground, Image, Alert } from 'react-native';
-=======
-import { View, Text, ImageBackground, Image } from 'react-native';
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { FlatButton, } from '../../../component';
 import { BACKGROUND_GODENLUCKYMONEY, FRAME_WIN, LOGO_1 } from '../../../../../assets';
 import { scaleHeight, scaleWidth, scale, HEIGHT, LightTheme, WITDH } from '../../../resource/values';
@@ -12,7 +8,6 @@ import { styles } from './Win.style';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { useNavigation } from '@react-navigation/native';
-<<<<<<< HEAD
 import  firestore  from '@react-native-firebase/firestore';
 const _Win: React.FC = ({route}: any) => {
     const { roomId , userId, userScore} = route.params;
@@ -41,16 +36,6 @@ const _Win: React.FC = ({route}: any) => {
             Alert.alert('Lỗi', 'Không thể cập nhật lì xì.');
         }
     };
-=======
-const _Win: React.FC = () => {
-
-    const navigation = useNavigation();
-
-    const handlePress = () => {
-        navigation.navigate('FindOpponents');
-    };
-
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     return (
         <View style={styles.background}>
             <RoundBackButton
@@ -73,18 +58,13 @@ const _Win: React.FC = () => {
             <Image source={LOGO_1} style={styles.logo} resizeMode='stretch' />
             <ImageBackground source={FRAME_WIN} style={styles.label} resizeMode='cover'>
                 <View style={styles.mission}>
-<<<<<<< HEAD
                     <Text style={[styles.text, { fontSize: scale(16), }]}>Bạn đạt {userScore}/5 câu đúng</Text>
-=======
-                    <Text style={[styles.text, { fontSize: scale(16), }]}>Bạn đạt 4/5 câu đúng</Text>
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
                     <Text style={styles.text2}>Xuất sắc quá! Thánh đáp nhanh trúng lớn đây rồi! Tích cực tham gia mỗi ngày để
                         có thêm nhiều lì xì nhé!
                     </Text>
 
                 </View>
                 <FlatButton
-<<<<<<< HEAD
                     title="Chia sẻ"
                     containerStyle={styles.button}
                     onPress={handlePress}
@@ -92,15 +72,6 @@ const _Win: React.FC = () => {
                 <FlatButton
                     title="Nhận lộc"
                     containerStyle={[styles.button, { marginTop: scaleHeight(19) }]}
-=======
-                    title="Tìm đối thủ"
-                    containerStyle={styles.button}
-                    onPress={handlePress}
-                />
-                                <FlatButton
-                    title="Tìm đối thủ"
-                    containerStyle={[styles.button, {marginTop: scaleHeight(19)}]}
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
                     onPress={handlePress}
                 />
             </ImageBackground>

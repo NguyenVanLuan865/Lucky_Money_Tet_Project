@@ -1,5 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
     [
@@ -21,7 +20,4 @@ module.exports = {
       },
     ],
   ],
-=======
-  presets: ['module:@react-native/babel-preset'],
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 };

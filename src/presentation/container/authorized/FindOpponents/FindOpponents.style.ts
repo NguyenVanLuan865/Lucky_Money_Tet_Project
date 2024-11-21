@@ -23,24 +23,15 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
   },
   buttonBack: {
-<<<<<<< HEAD
     left: scaleWidth(20),
     top: scaleHeight(60),
-=======
-    left: scaleWidth(-60),
-    top: scaleHeight(40),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     position:'absolute'
   },
   header: {
     flexDirection: 'row',
     width: scaleWidth(128),
     height: scaleHeight(30),
-<<<<<<< HEAD
     marginTop: scaleHeight(64),
-=======
-    marginTop: scaleHeight(49),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
   },
   textheader: {
     fontFamily: 'SVN-Cookies',
@@ -101,24 +92,13 @@ export const styles = StyleSheet.create({
   frameavatar: {
     width: scaleWidth(81),
     height: scaleHeight(84.37),
-<<<<<<< HEAD
+
     alignItems: 'center',
     justifyContent: 'center',
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
-  },
-  time: {
-    fontFamily: 'SVN-Gotham',
-    fontSize: scale(24),
-    marginTop: scaleHeight(47),
-    color: '#FCD60E'
-<<<<<<< HEAD
   },
   avatar: {
     width: scaleWidth(53.85),
     height: scaleHeight(43.47),
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
   }
   
 });

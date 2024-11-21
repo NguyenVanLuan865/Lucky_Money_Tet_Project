@@ -125,11 +125,5 @@ export const styles = StyleSheet.create({
     bottom: scaleHeight(10),
   },
   button: {
-<<<<<<< HEAD
-    // top: scaleHeight(1),
-=======
-    position:'absolute',
-    top: scaleHeight(681),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
   }
 });

@@ -19,11 +19,6 @@ export const styles = StyleSheet.create({
     width: scaleWidth(335),
     height: scaleHeight(511),
     top: scaleHeight(180),
-<<<<<<< HEAD
-=======
-    justifyContent: 'center',
-    alignItems: 'center',
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     backgroundColor: LightTheme.colorScheme.backgroundLabel,
     borderWidth: 2,
     borderColor: LightTheme.colorScheme.borderLabel,
@@ -41,11 +36,7 @@ export const styles = StyleSheet.create({
     flexDirection :'row',
   },
   tilteButton: {
-<<<<<<< HEAD
     fontSize: scale(14),
-=======
-    fontSize: scale(16),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     width: '80%',
     textAlign: 'center',
     color: LightTheme.colorScheme.primaryText,
@@ -66,11 +57,7 @@ export const styles = StyleSheet.create({
     borderRadius: 6
   },
   selectedTilteButton: {
-<<<<<<< HEAD
     fontSize: scale(14),
-=======
-    fontSize: scale(16),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     width: '80%',
     textAlign: 'center',
     color: LightTheme.colorScheme.backgroundLabel,

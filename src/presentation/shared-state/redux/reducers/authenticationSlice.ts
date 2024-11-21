@@ -75,7 +75,14 @@ const authenticationSlice = createSlice({
       .addCase(registerAsync.pending, (state) => {
         state.isAuthenticating = true;
         state.error = null;
-      })     
+      })   
+      .addCase(registerAsync.fulfilled, (state, action) => {
+        state.isAuthenticating = false;
+        state.isAuthorized = true; 
+        state.token = action.payload;
+        state.name = action.payload; 
+        state.error = null;
+      })        
       .addCase(registerAsync.rejected, (state, action) => {
         state.isAuthenticating = false;
         state.isAuthorized = false;

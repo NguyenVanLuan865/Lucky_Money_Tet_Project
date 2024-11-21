@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { View, Text, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import { BACKGROUND_TREASURE, LOGO_1 } from '../../../../../assets';
 import { styles } from './treasure.style';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
-<<<<<<< HEAD
 import { listenToUserData, listenToSubCollection } from '../../../../data/data-source/user';
 import { RootState } from '../../../shared-state';
 import { useSelector } from 'react-redux';
@@ -71,35 +66,6 @@ const _Treasure: React.FC = () => {
       <MaskedView
         style={styles.header}
         maskElement={<Text style={styles.textheader}>Kho lộc</Text>}
-=======
-import { scaleHeight, scaleWidth, scale, WITDH, HEIGHT } from '../../../resource/values';
-const button_tabview = [
-  {
-    id: 1,
-    tilte: 'Lắc lộc vàng',
-  },
-  {
-    id: 2,
-    tilte: 'Lì xì vàng',
-  },
-  {
-    id: 3,
-    tilte: 'Mã số \nmay mắn',
-  },
-]
-const _Treasure: React.FC = () => {
-  const [selectedButtonId, setSelectedButtonId] = useState(button_tabview[0].id);
-  const handlePress = (id: number) => {
-    setSelectedButtonId(id);
-  };
-  return (
-    <ImageBackground source={BACKGROUND_TREASURE} style={styles.background} resizeMode='stretch'>
-      <MaskedView
-        style={styles.header}
-        maskElement={
-          <Text style={styles.textheader}>Kho lộc</Text>
-        }
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
       >
         <LinearGradient
           colors={['#FCD60E', '#FFF9E1', '#FCD60E']}
@@ -126,34 +92,14 @@ const _Treasure: React.FC = () => {
                 selectedButtonId === button.id && styles.selectedTilteButton,
               ]}
             >
-<<<<<<< HEAD
               {button.title}
-=======
-              {button.tilte}
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
             </Text>
           </TouchableOpacity>
         ))}
       </View>
-<<<<<<< HEAD
       <View style={styles.label}>{renderContent()}</View>
     </ImageBackground>
   );
 };
 
 export const Treasure = React.memo(_Treasure);
-=======
-      <View style={styles.label}>
-
-      </View>
-    </ImageBackground>
-
-
-
-  );
-};
-
-
-export const Treasure = React.memo(_Treasure)
-
->>>>>>> b19083247395aec8135ea41e63760732b49f483b

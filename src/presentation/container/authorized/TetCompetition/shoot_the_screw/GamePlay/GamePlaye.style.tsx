@@ -76,13 +76,9 @@ export const styles = StyleSheet.create({
     width: scaleWidth(113),
     height: scaleHeight(42),
     marginTop: scaleHeight(4),
-<<<<<<< HEAD
     left: scaleWidth(111),
     justifyContent: 'center',
     alignItems: 'center',
-=======
-    left: scaleWidth(111)
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
   },
   bottomRightText: {
     position: 'absolute',

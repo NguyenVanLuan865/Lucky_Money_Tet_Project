@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React , { useState } from 'react';
 import { StyleSheet, View, Image, ImageBackground, Alert, Text } from 'react-native';
-=======
-import React from 'react';
-import { StyleSheet, View, Image, ImageBackground, SafeAreaView, Text } from 'react-native';
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { useNavigation } from '@react-navigation/native';
 import { BACKGROUND_FINDOPPONENTS_SHOOTTHEGREW, LABEL_FINDOPPONENTS_SHOOTTHEGREW, FRAME_FINDOPPONENTS_GOLDEN_SAINT } from '../../../../../../assets';
 import { scaleHeight, scaleWidth, scale } from '../../../../resource/values';
@@ -12,7 +7,6 @@ import { FlatButton, RoundBackButton } from '../../../../component';
 import { styles } from './FindOpponent.style';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
-<<<<<<< HEAD
 import { RootState, joinMatchQueueAsync, AppDispatch } from '../../../../shared-state';
 import { joinMatchQueueWithUserData } from '../../../../../data/data-source/user/matchService';
 import { useSelector, useDispatch } from 'react-redux';
@@ -41,23 +35,12 @@ const _FindOpponentGoldenSaint: React.FC = () => {
         }
       }
     };
-=======
-const _FindOpponentGoldenSaint: React.FC = () => {
-    const navigation = useNavigation();
-
-    const handlePress = () => {
-        navigation.navigate('GamePlayGoldenSaint');
-    };
-
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     return (
         <ImageBackground source={BACKGROUND_FINDOPPONENTS_SHOOTTHEGREW} style={styles.background} resizeMode="stretch">
             <RoundBackButton
                 containerStyle={styles.buttonBack}
-<<<<<<< HEAD
                 onPress={() => navigation.goBack()}
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
+
             />
             <MaskedView
                 style={styles.header}

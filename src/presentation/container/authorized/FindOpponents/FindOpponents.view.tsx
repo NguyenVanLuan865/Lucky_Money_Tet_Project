@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground, Alert } from 'react-native';
 import { FlatButton, RoundBackButton } from '../../../component';
 import { BACKGROUND_FINDOPPONENTS, FRAME_AVATAR, AVATAR_LEFT, AVATAR_RIGHT } from '../../../../../assets';
-=======
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
-import { FlatButton, RoundBackButton } from '../../../component';
-import { BACKGROUND_FINDOPPONENTS, FRAME_AVATAR } from '../../../../../assets';
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { scaleHeight, scaleWidth, scale, HEIGHT, LightTheme, WITDH } from '../../../resource/values';
 import { styles } from './FindOpponents.style';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { useNavigation } from '@react-navigation/native';
-<<<<<<< HEAD
 import firestore from '@react-native-firebase/firestore';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../shared-state';
@@ -159,14 +151,6 @@ const _FindOpponents: React.FC = ({ route }: any) => {
             console.error('Error starting game:', err);
             Alert.alert('Error', 'Failed to start the game.');
         }
-=======
-const _FindOpponents: React.FC = () => {
-
-    const navigation = useNavigation();
-
-    const handlePress = () => {
-        navigation.navigate('Win'); 
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     };
 
     return (
@@ -193,7 +177,6 @@ const _FindOpponents: React.FC = () => {
 
                 <View style={{ flex: 1 }}>
                     <ImageBackground source={FRAME_AVATAR} style={[styles.frameavatar]} resizeMode='stretch'>
-<<<<<<< HEAD
                         <Image source={AVATAR_LEFT} style={styles.avatar} />
                     </ImageBackground>
                     <Text style={[styles.text, { color: LightTheme.colorScheme.primaryText, textShadowColor: LightTheme.colorScheme.secondaryText, width: scaleWidth(75)}]}>{username}</Text>
@@ -208,37 +191,11 @@ const _FindOpponents: React.FC = () => {
                 </View>
             </View>
             <Text style={styles.time}>{formatTime(countdown)}</Text>
-            {/* <FlatButton
-                title={'Chơi'}
-                containerStyle={{ marginTop: scale(40) }}
-            // onPress={handlePress} */}
 
             <FlatButton
                 title={'Hủy'}
                 containerStyle={{ marginTop: scale(16) }}
                 onPress={() => navigation.goBack()}
-=======
-
-                    </ImageBackground>
-                    <Text style={[styles.text, { color: LightTheme.colorScheme.primaryText, textShadowColor: LightTheme.colorScheme.secondaryText, }]}>Username1</Text>
-                </View>
-                <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-                    <ImageBackground source={FRAME_AVATAR} style={[styles.frameavatar]} resizeMode='stretch'>
-
-                    </ImageBackground>
-                    <Text style={[styles.text, { color: '#FCD60E', textShadowColor: 'black', }]}>Username1</Text>
-
-                </View>
-            </View>
-            <Text style={styles.time}>00:05</Text>
-            <FlatButton
-                title={'Chơi'}
-                containerStyle={{marginTop: scale(40)}}
-                onPress={handlePress}
-            />
-            <FlatButton
-                title={'Hủy'}
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
             />
         </ImageBackground>
     );

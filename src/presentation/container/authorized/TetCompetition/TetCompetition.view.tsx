@@ -13,12 +13,9 @@ const _TetCompetition: React.FC = () => {
     const handlePress1 = () => {
         navigation.navigate('FindOpponent');
     };
-<<<<<<< HEAD
     const handlePress2 = () => {
         navigation.navigate('FindOpponentProtected');
     };
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 
     const handlePress3 = () => {
         navigation.navigate('FindOpponentGoldenSaint');

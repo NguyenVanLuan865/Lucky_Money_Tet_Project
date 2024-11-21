@@ -13,11 +13,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     width: scaleWidth(335),
     height: scaleHeight(593),
-<<<<<<< HEAD
     top: scaleHeight(122),
-=======
-    top: scaleHeight(102),
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     alignItems: 'center',
     backgroundColor: LightTheme.colorScheme.backgroundLabel,
     borderWidth: 2,

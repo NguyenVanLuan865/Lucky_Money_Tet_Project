@@ -31,11 +31,8 @@ export const styles = StyleSheet.create({
         width: scaleWidth(180.5),
         height: scaleHeight(188),
         marginTop: scaleHeight(32),
-<<<<<<< HEAD
         justifyContent: 'center',
         alignItems: 'center',
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     },
     text1: {
         fontFamily: 'SVN-Gotham',
@@ -60,7 +57,6 @@ export const styles = StyleSheet.create({
     username: {
         fontFamily: 'SVN-Cookies',
         fontSize: scale(16),
-<<<<<<< HEAD
         textAlign: 'center',
         color: LightTheme.colorScheme.buttonBorder,
     },
@@ -74,8 +70,5 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         color: LightTheme.colorScheme.buttonBorder,
         marginTop: scaleHeight(45.5)
-=======
-        textAlign: 'center'
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     }
 });

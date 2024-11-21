@@ -51,20 +51,13 @@ export const styles = StyleSheet.create({
     frameavartarank1: {
         width: scaleWidth(122.5),
         height: scaleHeight(126.5),
-<<<<<<< HEAD
         alignItems: 'center',
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     },
     frameavartarank2: {
         width: scaleWidth(122.5),
         height: scaleHeight(104),
-<<<<<<< HEAD
         marginLeft: scaleWidth(5),
         alignItems: 'center',
-=======
-        marginLeft: scaleWidth(5)
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     },
     rank: {
         width: scaleWidth(303),
@@ -75,7 +68,6 @@ export const styles = StyleSheet.create({
         width: scaleWidth(87),
         height: scaleHeight(21.25),
         marginTop: scaleHeight(8),
-<<<<<<< HEAD
         zIndex: 1,
     },
     avatarrank: {
@@ -130,7 +122,5 @@ export const styles = StyleSheet.create({
         color:  'black',
         textAlign: 'center',
         marginTop: scaleHeight(14.42)
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     }
 });

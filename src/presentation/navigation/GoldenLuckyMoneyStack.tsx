@@ -13,30 +13,24 @@ import { LuckeyMoney } from '../container/authorized/LuckeyMoney/LuckeyMoney.vie
 import { WaitingLuckeyMoney } from '../container/authorized/WaitingLuckeyMoney/WaitingLuckeyMoney.view';
 import { GamePlayGoldenSaint } from '../container/authorized/Golden_Saint/GamePlay/GamePlay.view';
 import { Rankings } from '../container/authorized/Rankings/Rankings.view';
-<<<<<<< HEAD
-import { Congress } from '../container/authorized/Congress/Congress.view';
+import  Congress  from '../container/authorized/Congress';
 import { GoldenLuckyMoneyStackParamList } from '../storyboard';
 import { QuestionScreen } from '../container/authorized/Question/Question.view';
 import { Result } from '../container/authorized/Result/Result.view';
 import { FindOpponentProtected } from '../container/authorized/Protect/FindOpponent/FindOpponent.view';
 import { GamePlayProtect } from '../container/authorized/Protect/GamePlay/GamePlay.view';
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 const GoldenLuckyMoneyStackNavigator = createStackNavigator();
 
 export const GoldenLuckyMoneyStack: React.FC = () => {
   return (
     <GoldenLuckyMoneyStackNavigator.Navigator>
       <GoldenLuckyMoneyStackNavigator.Screen
-<<<<<<< HEAD
         name="Congress"
         component={Congress}
         options={{ headerShown: false }}
       />
       <GoldenLuckyMoneyStackNavigator.Screen
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
-        name="GoldenLuckyMoneyMain"
+       name="GoldenLuckyMoneyMain"
         component={GoldenLuckyMoney}
         options={{ headerShown: false }}
       />
@@ -95,7 +89,6 @@ export const GoldenLuckyMoneyStack: React.FC = () => {
         component={Rankings}
         options={{ headerShown: false }}
       />
-<<<<<<< HEAD
       <GoldenLuckyMoneyStackNavigator.Screen
         name="Question"
         component={QuestionScreen}
@@ -106,18 +99,16 @@ export const GoldenLuckyMoneyStack: React.FC = () => {
         component={Result}
         options={{ headerShown: false }}
       />
-            <GoldenLuckyMoneyStackNavigator.Screen
+      <GoldenLuckyMoneyStackNavigator.Screen
         name="FindOpponentProtected"
         component={FindOpponentProtected}
         options={{ headerShown: false }}
       />
-            <GoldenLuckyMoneyStackNavigator.Screen
+      <GoldenLuckyMoneyStackNavigator.Screen
         name="GamePlayProtect"
         component={GamePlayProtect}
         options={{ headerShown: false }}
       />
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
     </GoldenLuckyMoneyStackNavigator.Navigator>
   );
 };

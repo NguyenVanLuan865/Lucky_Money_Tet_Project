@@ -1,0 +1,4 @@
+{
+    "name": "sign-in",
+    "main": "./sign-in.view"
+}

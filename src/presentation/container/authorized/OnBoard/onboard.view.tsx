@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Image, ImageBackground, SafeAreaView, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-<<<<<<< HEAD
-// import { BACKGROUND_ONBOARD, ICON_ONBOARD, LABEL_ONBOARD } from '../../../../../assets';
-=======
->>>>>>> b19083247395aec8135ea41e63760732b49f483b
 import { BACKGROUND_ONBOARD, ICON_ONBOARD, LABEL_ONBOARD } from '../../../../../assets';
 import { FlatButton } from '../../../component';
 import { styles } from './onboard.style';
