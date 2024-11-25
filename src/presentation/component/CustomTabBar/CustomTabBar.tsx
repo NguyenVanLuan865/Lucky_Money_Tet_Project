@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet , Image} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { WITDH, scaleHeight, scale, scaleWidth } from '../../resource';
 import { LightTheme } from '../../resource';
@@ -30,34 +30,38 @@ const RouteName_Title = [
 ];
 
 const _CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
+  const handleTabPress = (route: string, index: number) => {
+    if (state.index === index) return; 
+    navigation.navigate(route); 
+  };
+
   return (
     <View style={styles.tabContainer}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label = options.tabBarLabel !== undefined ? options.tabBarLabel : route.name;
-
         const isFocused = state.index === index;
 
-        const onPress = () => {
-          const event = navigation.emit({
-            type: 'tabPress',
-            target: route.key,
-            canPreventDefault: true,
-          });
-
-          if (!isFocused && !event.defaultPrevented) {
-            navigation.navigate(route.name);
-          }
-        };
         const routeInfo = RouteName_Title.find(item => item.route === route.name);
+
         return (
           <TouchableOpacity
             key={index}
-            onPress={onPress}
-            style={[styles.tabButton, isFocused && styles.tabButtonFocused]}
+            onPress={() => handleTabPress(route.name, index)}
+            disabled={isFocused} 
+            style={[
+              styles.tabButton,
+              isFocused && styles.tabButtonFocused, 
+            ]}
           >
-            <Image source={routeInfo ? routeInfo.image : null} resizeMode="contain" style={routeInfo ? routeInfo.imageStyle : {}} />
-            <Text style={[styles.tabLabel]}>
+            {routeInfo?.image && (
+              <Image
+                source={routeInfo.image}
+                resizeMode="contain"
+                style={routeInfo.imageStyle}
+              />
+            )}
+            <Text style={styles.tabLabel}>
               {routeInfo ? routeInfo.title : label}
             </Text>
           </TouchableOpacity>
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
   },
   tabButtonFocused: {
     backgroundColor: LightTheme.colorScheme.secondaryButtonBackground,
-    shadowColor: '#000000',
+    shadowColor: '#000',
     shadowOffset: {
       width: 2,
       height: 2,

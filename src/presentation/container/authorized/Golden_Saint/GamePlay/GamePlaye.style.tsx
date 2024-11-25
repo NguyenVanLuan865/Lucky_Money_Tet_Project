@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   buttonBack: {
     left: scaleWidth(20),
     top: scaleHeight(60),
-    position:'absolute'
+    position: 'absolute'
   },
   header: {
     flexDirection: 'row',
@@ -82,18 +82,21 @@ export const styles = StyleSheet.create({
   },
   bottomRightText: {
     position: 'absolute',
-    bottom: 5, // Khoảng cách từ dưới lên
-    right: 30,  // Khoảng cách từ bên phải vào
-    color: 'white', // Màu chữ
-    fontSize: 14,   // Kích thước chữ
+    bottom: scaleHeight(5),
+    right: scaleWidth(30),
+    color: LightTheme.colorScheme.buttonGradientStart,
+    fontSize: scale(20),
+    textAlign: 'center',
+    fontFamily: 'SVN-Gotham'
   },
   bottomLeftText: {
     position: 'absolute',
-    bottom: 5,
-    left: 30, 
-    color: 'white',
-    fontSize: 14,   
-    alignItems: 'center',
+    bottom: scaleHeight(5),
+    left: scaleWidth(30),
+    color: LightTheme.colorScheme.buttonGradientStart,
+    fontSize: scale(20),
+    textAlign: 'center',
+    fontFamily: 'SVN-Gotham'
   },
 
   frameaccessory: {
@@ -117,10 +120,10 @@ export const styles = StyleSheet.create({
     fontSize: scale(17),
     color: LightTheme.colorScheme.primaryText,
     position: 'absolute',
-    top:  scaleHeight(129),
+    top: scaleHeight(129),
     left: scaleWidth(140),
-    textShadowColor: LightTheme.colorScheme.buttonBorder, 
-    textShadowOffset: { width: 1, height: 1 }, 
+    textShadowColor: LightTheme.colorScheme.buttonBorder,
+    textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
   },
 

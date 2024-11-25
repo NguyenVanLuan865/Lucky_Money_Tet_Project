@@ -1,0 +1,4 @@
+{
+    "name": "FindOpponents",
+    "main": "./FindOpponents.view.tsx"
+}

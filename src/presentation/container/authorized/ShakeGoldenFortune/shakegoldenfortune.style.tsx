@@ -61,7 +61,6 @@ export const styles = StyleSheet.create({
     icon: {
       width: scaleWidth(55.5),
       height: scaleHeight(49),
-      marginLeft: scaleWidth(68),
     },
     frameluckycode: {
       width: scaleWidth(97),

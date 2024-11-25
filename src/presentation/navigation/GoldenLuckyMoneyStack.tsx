@@ -1,19 +1,22 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { GoldenLuckyMoney } from '../container';
 import { GamePlay } from '../container/authorized/TetCompetition/shoot_the_screw/GamePlay/GamePlay.view';
 import { FindOpponent } from '../container/authorized/TetCompetition/shoot_the_screw/FindOpponent/FindOpponent.view';
 import { FindOpponentGoldenSaint } from '../container/authorized/Golden_Saint/FindOpponent/FindOpponent.view';
 import { TetCompetition } from '../container/authorized/TetCompetition/TetCompetition.view';
 import { Win } from '../container/authorized/WIn/Win.view';
-import { FindOpponents } from '../container/authorized/FindOpponents/FindOpponents.view';
 import { Supermarket } from '../container/authorized/Supermarket/Supermarket.view';
-import { LuckeyMoney } from '../container/authorized/LuckeyMoney/LuckeyMoney.view';
+import { } from '../container/authorized';
 import { WaitingLuckeyMoney } from '../container/authorized/WaitingLuckeyMoney/WaitingLuckeyMoney.view';
 import { GamePlayGoldenSaint } from '../container/authorized/Golden_Saint/GamePlay/GamePlay.view';
-import { Rankings } from '../container/authorized/Rankings/Rankings.view';
-import  Congress  from '../container/authorized/Congress';
+import { 
+  Congress, 
+  FindOpponents, 
+  GoldenLuckyMoney,
+  LuckeyMoney,
+  Rankings
+} from '../container';
 import { GoldenLuckyMoneyStackParamList } from '../storyboard';
 import { QuestionScreen } from '../container/authorized/Question/Question.view';
 import { Result } from '../container/authorized/Result/Result.view';

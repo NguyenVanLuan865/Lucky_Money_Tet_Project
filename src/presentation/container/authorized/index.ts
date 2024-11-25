@@ -1,5 +1,10 @@
-export * from './OnBoard/onboard.style';
-export * from './GoldenLuckyMoney/goldenluckymoney.view';
+
+export { default as GoldenLuckyMoney } from './GoldenLuckyMoney';
 export * from './ShakeGoldenFortune/shakegoldenfortune.view';
 export * from './Treasure/treasure.view';
-export * from './Congress';
+export { default as Congress } from './Congress';
+export * from './FindOpponents';
+export { default as LuckeyMoney } from './LuckeyMoney';
+export { default as OnBoard } from './OnBoard';
+export * from './ShakeGoldenFortune';
+export * from './Rankings';

@@ -13,10 +13,18 @@ export const ICON_MYRANK = require('./icon-myrank.png');
 export const ICON_FACE = require('./icon-face.png');
 export const ICON_FACE_2 = require('./icon-face-2.png');
 export const ICON_GOLDEN = require('./icon-golden.png');
+export const ICON_HALFGOLDEN = require('./icon-HalfGold.png');
 export const ICON_PHUKIEN = require('./icon-phukien.png');
 export const ICON_PROTECT_1 = require('./icon-protect-1.png');
 export const ICON_PROTECT_2 = require('./icon-protect-2.png');
 export const ICON_PROTECT_3 = require('./icon-protect-3.png');
+export const ICON_TICKED = require('./icon-ticked.png');
+export const ICON_LOSE = require('./icon-lose.png');
+export const ICON_SUPERPROTECT = require('./icon-superprotect.png');
+
+
+
+
 
 
 

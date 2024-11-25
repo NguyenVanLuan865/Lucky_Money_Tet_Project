@@ -7,9 +7,7 @@ interface LuckyCode {
 }
 
 const useGoldenFortune = () => {
-    const [isProcessing, setIsProcessing] = useState(false);
-
-    // Random phần thưởng và xử lý
+   
     const randomAndProcessReward = async (userId: string) => {
         const rewardSnapshot = await firestore().collection('reward').get();
         let rewards = rewardSnapshot.docs.map((doc) => ({
@@ -46,8 +44,6 @@ const useGoldenFortune = () => {
         throw new Error('No reward selected.');
     };
     
-
-    // Random mã lucky code và xử lý
     const randomAndProcessLuckyCode = async () => {
         const luckyCodeSnapshot = await firestore().collection('luckycode').get();
         const luckyCodes = luckyCodeSnapshot.docs.map((doc) => ({
@@ -73,8 +69,6 @@ const useGoldenFortune = () => {
         throw new Error('No lucky code available.');
     };
     
-
-    // Gán mã lucky code vào user
     const assignLuckyCodeToUser = async (userId: string, luckyCode: LuckyCode) => {
         try {
             if (!luckyCode) return;
@@ -95,7 +89,6 @@ const useGoldenFortune = () => {
         }
     };
 
-    // Hàm handleShakeOnce
     const handleShakeOnce = async (userId: string) => {
         try {
             const reward = await randomAndProcessReward(userId); // Gọi hàm xử lý phần thưởng
@@ -114,7 +107,6 @@ const useGoldenFortune = () => {
     
 
     return {
-        isProcessing,
         handleShakeOnce,
     };
 };

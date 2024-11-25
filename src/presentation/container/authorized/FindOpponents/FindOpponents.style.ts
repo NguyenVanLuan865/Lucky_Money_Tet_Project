@@ -9,19 +9,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: LightTheme.colorScheme.backgroundgodmonetlucky,
   },
-  label: {
-    position: 'absolute',
-    width: scaleWidth(335),
-    height: scaleHeight(593),
-    top: scaleHeight(102),
-    alignItems: 'center',
-    backgroundColor: LightTheme.colorScheme.backgroundLabel,
-    borderWidth: 2,
-    borderColor: LightTheme.colorScheme.borderLabel,
-    borderRadius: 8,
-    overflow: 'hidden',
-    alignContent: 'center',
-  },
   buttonBack: {
     left: scaleWidth(20),
     top: scaleHeight(60),
@@ -29,7 +16,7 @@ export const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    width: scaleWidth(128),
+    width: scaleWidth(248),
     height: scaleHeight(30),
     marginTop: scaleHeight(64),
   },
@@ -38,48 +25,6 @@ export const styles = StyleSheet.create({
     fontSize: scale(24),
     color: LightTheme.colorScheme.backgroundLabel,
     textAlign: 'center',
-  },
-  text: {
-    fontFamily: 'SVN-Cookies',
-    fontSize: scale(18),
-    textShadowOffset: { width: 1, height: 1 }, 
-    textShadowRadius: 1,
-  },
-  text2: {
-    fontFamily: 'SVN-Gotham-Light',
-    fontSize: scale(12),
-  },
-  mission: {
-    backgroundColor: 'rgba(0, 0, 0, 0.1)', 
-    width: scaleWidth(331),
-    height: scaleHeight(75),
-    marginTop: scaleHeight(11),
-    paddingLeft: scaleWidth(21),
-    paddingTop: scaleHeight(11),
-  },
-  minibaner: {
-    width: scaleWidth(303),
-    height: scaleHeight(204),
-    marginTop: scaleHeight(19),
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor:  LightTheme.colorScheme.borderLabel,
-  },
-  notebaner: {
-    width: scaleWidth(294),
-    height: scaleHeight(78),
-    marginTop: scaleHeight(31),
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor:  LightTheme.colorScheme.borderLabel,
-    backgroundColor: LightTheme.colorScheme.backgroundgodmonetlucky,
-    textAlign: 'center',
-    padding: 10
-  },
-  button: {
-    width: scaleWidth(153),
-    height: scaleHeight(44),
-    marginTop: scaleHeight(32),
   },
   labelframeavatar : {
     width: scaleWidth(264),
@@ -99,6 +44,32 @@ export const styles = StyleSheet.create({
   avatar: {
     width: scaleWidth(53.85),
     height: scaleHeight(43.47),
+  },
+  textavatar: {
+    fontFamily: 'SVN-Cookies',
+    fontSize: scale(12),
+    color: LightTheme.colorScheme.backgroundLabel,
+    textAlign: 'center',
+    maxWidth: scaleWidth(81)
+  },
+  nameuser: {
+    color: LightTheme.colorScheme.primaryText,
+    textShadowColor: 'white', 
+    textShadowOffset: { width: 1, height: 1 }, 
+    textShadowRadius: 1,
+  },
+  nameopponent: {
+    color: LightTheme.colorScheme.buttonGradientStart,
+    textShadowColor: 'black', 
+    textShadowOffset: { width: 1, height: 1 }, 
+    textShadowRadius: 1,
+  },
+  time: {
+    fontFamily: 'SVN-Gotham',
+    fontSize: scale(24),
+    color: LightTheme.colorScheme.buttonGradientStart,
+    width: scaleWidth(77.8),
+    height: scaleHeight(40.59),
+    marginTop: scaleHeight(12),
   }
-  
 });

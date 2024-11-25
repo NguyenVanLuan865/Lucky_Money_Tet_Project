@@ -1,0 +1,4 @@
+{
+    "name": "ShakeGoldenFortune",
+    "main": "shakegoldenfortune.view.tsx"
+}

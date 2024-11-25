@@ -1,3 +1,4 @@
 {
-    "main": "onboard.style.tsx"
+    "name": "OnBoard",
+    "main": "onboard.view.tsx"
 }

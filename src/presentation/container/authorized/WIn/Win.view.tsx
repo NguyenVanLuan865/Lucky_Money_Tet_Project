@@ -8,15 +8,14 @@ import { styles } from './Win.style';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { useNavigation } from '@react-navigation/native';
-import  firestore  from '@react-native-firebase/firestore';
-const _Win: React.FC = ({route}: any) => {
-    const { roomId , userId, userScore} = route.params;
+import firestore from '@react-native-firebase/firestore';
+const _Win: React.FC = ({ route }: any) => {
+    const { roomId, userId, userScore, game } = route.params;
     const navigation = useNavigation();
 
 
     const handlePress = async () => {
         try {
-            // Lấy tài liệu `lixi` trong collection `users` và cộng 1
             const userRef = firestore().collection('users').doc(userId);
             await firestore().runTransaction(async (transaction) => {
                 const userDoc = await transaction.get(userRef);
@@ -30,7 +29,7 @@ const _Win: React.FC = ({route}: any) => {
             });
 
             console.log('Đã cộng thêm 1 vào lixi thành công!');
-            navigation.navigate('Rankings'); // Điều hướng đến màn hình chính
+            navigation.replace('Rankings'); // Điều hướng đến màn hình chính
         } catch (error) {
             console.error('Lỗi khi cập nhật lixi:', error);
             Alert.alert('Lỗi', 'Không thể cập nhật lì xì.');
@@ -44,7 +43,10 @@ const _Win: React.FC = ({route}: any) => {
             <MaskedView
                 style={styles.header}
                 maskElement={
-                    <Text style={styles.textheader}>THÁNH LÌ XÌ</Text>
+                    <Text style={styles.textheader}>
+                        {game === 'game1'
+                            ? `THÁNH LÌ XÌ`
+                            : `TẾT TRANH TÀI`}</Text>
                 }
             >
                 <LinearGradient
@@ -58,9 +60,16 @@ const _Win: React.FC = ({route}: any) => {
             <Image source={LOGO_1} style={styles.logo} resizeMode='stretch' />
             <ImageBackground source={FRAME_WIN} style={styles.label} resizeMode='cover'>
                 <View style={styles.mission}>
-                    <Text style={[styles.text, { fontSize: scale(16), }]}>Bạn đạt {userScore}/5 câu đúng</Text>
-                    <Text style={styles.text2}>Xuất sắc quá! Thánh đáp nhanh trúng lớn đây rồi! Tích cực tham gia mỗi ngày để
-                        có thêm nhiều lì xì nhé!
+                    <Text style={[styles.text, { fontSize: scale(16), }]}>
+                        {game === 'game1'
+                            ? `Bạn đạt ${userScore}/5 câu đúng`
+                            : `Bạn đạt ${userScore} điểm`}
+                    </Text>
+                    <Text style={styles.text2}>
+                        {game === 'game1'
+                            ? `Xuất sắc quá! Thánh đáp nhanh trúng lớn đây rồi! Tích cực tham gia mỗi ngày để
+                        có thêm nhiều lì xì nhé!`
+                            : `Tuyệt vời! Bạn đúng là một cao thủ trong trò chơi này! Hãy tiếp tục chinh phục thử thách mỗi ngày để tích lũy thêm thật nhiều điểm thưởng nhé!`}
                     </Text>
 
                 </View>

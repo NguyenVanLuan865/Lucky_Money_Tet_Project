@@ -1,18 +1,18 @@
 import React, { useRef, useEffect } from 'react';
-import { View, Text, StyleSheet, Modal, Animated, ActivityIndicator } from 'react-native';
-import { useSelector } from 'react-redux';
+import { View, Text, StyleSheet, Modal, Animated, ActivityIndicator, Image } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../shared-state/redux/store'; // Thay bằng đường dẫn chính xác đến store của bạn
+import { resetSuccess } from '../../shared-state/redux/reducers/loadingSlice'; // Thay bằng đường dẫn đến slice của bạn
+import { ANIMATION_TICKED ,ICON_TICKED} from '../../../../assets'; // Thay bằng đường dẫn chính xác đến GIF ticked
 
-interface LoadingProps {
-  message?: string;
-}
-
-const FullScreenLoadingIndicator: React.FC<LoadingProps> = () => {
-  const { isLoading, message } = useSelector((state: any) => state.loading);
+const FullScreenLoadingIndicator: React.FC = () => {
+  const { isLoading, message, isSuccess } = useSelector((state: RootState) => state.loading);
+  const dispatch = useDispatch();
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading || isSuccess) {
       Animated.timing(fadeAnim, {
         toValue: 1,
         duration: 500,
@@ -25,13 +25,30 @@ const FullScreenLoadingIndicator: React.FC<LoadingProps> = () => {
         useNativeDriver: true,
       }).start();
     }
-  }, [isLoading, fadeAnim]);
+
+    if (isSuccess) {
+      const timer = setTimeout(() => {
+        dispatch(resetSuccess()); 
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading, isSuccess, fadeAnim, dispatch]);
 
   return (
-    <Modal transparent animationType="fade" visible={isLoading}>
+    <Modal transparent animationType="fade" visible={isLoading || isSuccess}>
       <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-        <ActivityIndicator size="large" color="#fff" />
-        {message && <Text style={styles.message}>{message}</Text>}
+        {isSuccess ? (
+          <>
+            <Image source={ICON_TICKED} style={styles.ticked} />
+            <Text style={styles.successText}>Hoàn thành!</Text>
+          </>
+        ) : (
+          <>
+            <ActivityIndicator size="large" color="#fff" />
+            {message && <Text style={styles.message}>{message}</Text>}
+          </>
+        )}
       </Animated.View>
     </Modal>
   );
@@ -48,6 +65,21 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 16,
     color: '#fff',
+  },
+  ticked: {
+    width: 100,
+    height: 100,
+  },
+  successText: {
+    marginTop: 10,
+    fontSize: 18,
+    color: '#77cc00',
+    fontFamily: 'SVN-Cookies',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
   },
 });
 

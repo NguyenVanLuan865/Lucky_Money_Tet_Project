@@ -1,0 +1,4 @@
+{
+    "name": "LuckeyMoney",
+    "main": "./LuckeyMoney.view.tsx"
+}

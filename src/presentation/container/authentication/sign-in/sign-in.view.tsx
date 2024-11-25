@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, TextInput, Text, ImageBackground, Image, Animated } from 'react-native';
-import { FRAME_AVATAR, ICON_FACE, BACKGROUND_ONBOARD } from '../../../../../assets';
+import { FRAME_AVATAR, ICON_FACE, BACKGROUND_ONBOARD , ICON_TICKED} from '../../../../../assets';
 import { FlatButton, Loading } from '../../../component';
 import { styles } from './sign-in.style';
 import { useSignInHandlers, useShakeAnimation  } from './sign-in.hook'
@@ -38,6 +38,9 @@ const SignIn: React.FC = () => {
             }}
           >
             <Image source={ICON_FACE} style={styles.face} />
+            {/* <Image source={ICON_FACE} style={styles.face} /> */}
+
+
           </Animated.View>
         </ImageBackground>
         <TextInput

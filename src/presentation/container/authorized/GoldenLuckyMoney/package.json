@@ -1,0 +1,4 @@
+{
+    "name": "GoldenLuckyMoney",
+    "main": "./goldenluckymoney.view.tsx"
+}

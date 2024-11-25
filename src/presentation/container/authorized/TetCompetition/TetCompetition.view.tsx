@@ -31,20 +31,21 @@ const _TetCompetition: React.FC = () => {
                 buttonWidth={scaleWidth(245)}
                 buttonHeight={scaleHeight(44)}
                 containerStyle={styles.button1}
-                onPress={handlePress1}
+                onPress={() => navigation.navigate('FindOpponent')}
             />
             <FlatButton
                 title={['Anh hùng Siêu bảo vệ', 'Ra mắt vào ngày 08/11']}
                 buttonWidth={scaleWidth(245)}
                 buttonHeight={scaleHeight(62)}
                 containerStyle={{marginTop: scaleHeight(16)}}
+                onPress={() => navigation.navigate('FindOpponentProtected')}
             />
             <FlatButton
                 title={['Thánh Ánh Kim', 'Ra mắt vào ngày 08/11']}
                 buttonWidth={scaleWidth(245)}
                 buttonHeight={scaleHeight(62)}
                 containerStyle={{marginTop: scaleHeight(16)}}
-                onPress={handlePress3}
+                onPress={() => navigation.navigate('FindOpponentGoldenSaint')}
             />
         </ImageBackground>
     );

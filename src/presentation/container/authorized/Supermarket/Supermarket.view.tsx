@@ -10,7 +10,7 @@ import MaskedView from '@react-native-masked-view/masked-view';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../../shared-state';
 import { listenToRewards } from '../../../../data/data-source/user';
-import { useUserData, useSimpleQuantity } from './Supermarket.hook';
+import { useUserData } from './Supermarket.hook';
 import { redeemRewardAsync } from '../../../shared-state';
 import { useNavigation } from '@react-navigation/native';
 

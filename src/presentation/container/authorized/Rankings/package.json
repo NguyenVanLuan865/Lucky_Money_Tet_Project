@@ -1,0 +1,4 @@
+{
+    "name": "Rankings",
+    "main": "Rankings.view.tsx"
+}

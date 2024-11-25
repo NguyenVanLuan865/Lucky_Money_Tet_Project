@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
 
   },
   textheader: {
-    color:LightTheme.colorScheme.primaryText,
+    color: LightTheme.colorScheme.primaryText,
     top: scaleHeight(60),
     fontSize: scale(24),
     fontFamily: 'SVN-Cookies',
@@ -46,6 +46,21 @@ export const styles = StyleSheet.create({
     fontFamily: 'SVN-Gotham',
     color: '#FFF',
     textAlign: 'center',
-    
+
+  },
+  popupButton: {
+    marginTop: scaleHeight(134)
+  },
+  popup: {
+    width: scaleWidth(345.5),
+    height: scaleHeight(205),
+    alignItems: 'center',
+  },
+  popupview: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
   }
 });

@@ -1,4 +1,4 @@
-export interface Question {
+export type Question = {
   id: string;
   question: string;
   A: string;
@@ -6,4 +6,4 @@ export interface Question {
   C: string;
   D: string;
   answer: string;
-}
+};

@@ -20,8 +20,8 @@ const _FindOpponent: React.FC = () => {
       try {
         const playerName = await joinMatchQueueWithUserData(userId!, 'game2'); 
         setName(playerName); 
-  
-        navigation.navigate('WaitingLuckeyMoney', { name: playerName , game: 'game2'});
+        console.log(playerName)
+        navigation.replace('WaitingLuckeyMoney', { name: playerName , game: 'game2'});
       } catch (err) {
         if (err instanceof Error) {
           Alert.alert('Lỗi', err.message);
