@@ -2,12 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchUserAndSubCollectionsAsync } from '../action';
 
 interface UserState {
-  user: Record<string, any> | null; // Thông tin người dùng
-  laclocvang: any[]; // Sub-collection `laclocvang`
-  lixi: any[]; // Sub-collection `lixi`
-//   masomayman: any[]; // Sub-collection `masomayman`
-  isLoading: boolean; // Trạng thái loading
-  error: string | null; // Lỗi nếu có
+  user: Record<string, any> | null; 
+  laclocvang: any[]; 
+  lixi: any[];
+  isLoading: boolean; 
+  error: string | null; 
 }
 
 const initialState: UserState = {

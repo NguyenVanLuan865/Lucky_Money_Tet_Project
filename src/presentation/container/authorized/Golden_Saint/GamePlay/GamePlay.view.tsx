@@ -40,10 +40,8 @@ const _GamePlayGoldenSaint: React.FC = ({route}: any) => {
         reminderDuration: 2000,
     });
 
-    // Danh sách icon đang hiển thị
     const [activeIcons, setActiveIcons] = useState<any[]>([]);
 
-    // Xử lý sự kiện nhấn và hiển thị icon
     const handleTouchWithIcons = (event: any) => {
         const { locationX, locationY } = event.nativeEvent;
 
@@ -53,22 +51,21 @@ const _GamePlayGoldenSaint: React.FC = ({route}: any) => {
             x: locationX,
             y: locationY,
             icon: icons[randomIndex],
-            fadeAnim: new Animated.Value(1), // Animation mờ dần
+            fadeAnim: new Animated.Value(1), 
         };
 
         setActiveIcons((prev) => [...prev, newIcon]);
 
-        // Animation mờ dần
         Animated.timing(newIcon.fadeAnim, {
             toValue: 0,
             duration: 500,
             useNativeDriver: true,
         }).start(() => {
-            // Xóa icon sau khi animation hoàn tất
+
             setActiveIcons((prev) => prev.filter((icon) => icon.id !== newIcon.id));
         });
 
-        handleTouch(event); // Gọi logic tăng điểm từ hook
+        handleTouch(event);
     };
 
     return (

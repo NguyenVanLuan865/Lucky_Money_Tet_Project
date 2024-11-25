@@ -49,7 +49,6 @@ const authenticationSlice = createSlice({
         state.token = null;
         state.error = action.payload as string;
       })
-      // Đăng nhập cục bộ
       .addCase(localSignInAsync.pending, (state) => {
         state.isAuthenticating = true;
         state.error = null;
@@ -65,13 +64,11 @@ const authenticationSlice = createSlice({
         state.isAuthorized = false;
         state.error = action.payload as string;
       })
-      // Đăng xuất
       .addCase(signOutAsync.fulfilled, (state) => {
         state.isAuthorized = false;
         state.token = null; 
         state.error = null;
       })
-      // Đăng ký
       .addCase(registerAsync.pending, (state) => {
         state.isAuthenticating = true;
         state.error = null;

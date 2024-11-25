@@ -27,20 +27,18 @@ const _ContentTextView: React.FC<TextViewProps> = (props) => {
   );
 };
 
-// Xuất các component với Memo để tối ưu hiệu năng
 export const HeaderTextView = React.memo(_HeaderTextView);
 export const ContentTextView = React.memo(_ContentTextView);
 
-// Style riêng cho từng loại TextView
 const styles = StyleSheet.create({
   headerText: {
-    fontSize: 20, // Kích thước lớn hơn cho Header
+    fontSize: 20, 
     fontWeight: 'bold',
     color: '#333',
     fontFamily: 'SVN-Cookies'
   },
   contentText: {
-    fontSize: 16, // Kích thước nhỏ hơn cho nội dung
+    fontSize: 16,
     color: '#4f4f4f',
     fontFamily: 'SVN-Gotham'
   },

@@ -6,13 +6,13 @@ import { RootState } from '../../../shared-state';
 import { showLoading, hideLoading } from '../../../shared-state/redux/reducers/loadingSlice';
 
 export const useRankingsLogic = () => {
-    const [topUsers, setTopUsers] = useState<any[]>([]); // Top 5 người dùng
-    const [userRank, setUserRank] = useState<number | null>(null); // Thứ hạng của người dùng hiện tại
-    const [userData, setUserData] = useState<any>(null); // Dữ liệu của người dùng hiện tại
-    const [isWaiting, setIsWaiting] = useState<boolean>(true); // Đợi một khoảng thời gian trước khi tải
+    const [topUsers, setTopUsers] = useState<any[]>([]); 
+    const [userRank, setUserRank] = useState<number | null>(null); 
+    const [userData, setUserData] = useState<any>(null); 
+    const [isWaiting, setIsWaiting] = useState<boolean>(true); 
 
     const dispatch = useDispatch();
-    const userId = useSelector((state: RootState) => state.authentication.token); // ID người dùng từ Redux
+    const userId = useSelector((state: RootState) => state.authentication.token); 
     const navigation = useNavigation();
     const handlePress1 = () => {
         navigation.navigate('Congress');
@@ -28,12 +28,10 @@ export const useRankingsLogic = () => {
         return () => clearTimeout(timeout); 
     }, [userId]);
 
-    // Hàm lấy dữ liệu bảng xếp hạng
     const fetchLeaderboardData = async () => {
         try {
             dispatch(showLoading('Đang tải bảng xếp hạng...'));
 
-            // Lấy top 5 người dùng
             const topSnapshot = await firestore()
                 .collection('users')
                 .orderBy('lixi', 'desc')
@@ -46,12 +44,10 @@ export const useRankingsLogic = () => {
             }));
             setTopUsers(topUsers);
 
-            // Lấy thông tin người dùng hiện tại
             const userDoc = await firestore().collection('users').doc(userId!).get();
             const userData = userDoc.data();
             setUserData(userData);
 
-            // Lấy thứ hạng của người dùng hiện tại
             const allUsersSnapshot = await firestore()
                 .collection('users')
                 .orderBy('lixi', 'desc')
@@ -71,10 +67,10 @@ export const useRankingsLogic = () => {
     };
 
     return {
-        isWaiting, // Trạng thái chờ ban đầu
-        topUsers, // Top 5 người dùng
-        userRank, // Thứ hạng người dùng
-        userData, // Dữ liệu người dùng hiện tại
-        handlePress1, // Hàm xử lý quay lại
+        isWaiting,
+        topUsers, 
+        userRank, 
+        userData, 
+        handlePress1, 
     };
 };

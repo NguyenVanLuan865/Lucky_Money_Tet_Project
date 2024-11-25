@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface LoadingState {
   isLoading: boolean;
   message: string | null;
-  isSuccess: boolean; // Để hiển thị ticked
+  isSuccess: boolean;
 }
 
 const initialState: LoadingState = {
@@ -24,10 +24,10 @@ const loadingSlice = createSlice({
     hideLoading(state, action: PayloadAction<string | null>) {
       state.isLoading = false;
       state.message = null;
-      state.isSuccess = !!action.payload; // Hiển thị ticked nếu có thông báo
+      state.isSuccess = !!action.payload; 
     },
     resetSuccess(state) {
-      state.isSuccess = false; // Đặt lại trạng thái sau khi hiển thị ticked
+      state.isSuccess = false; 
     },
   },
 });

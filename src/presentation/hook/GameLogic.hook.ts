@@ -21,7 +21,7 @@ export const useGameLogic = ({
     const [randomIcon, setRandomIcon] = useState(null);
     const [clickCount, setClickCount] = useState(0);
     const [showReminder, setShowReminder] = useState(false);
-    const [isGameActive, setIsGameActive] = useState(true); // Trạng thái game đang hoạt động
+    const [isGameActive, setIsGameActive] = useState(true); 
     const navigation = useNavigation();
 
     useEffect(() => {
@@ -36,7 +36,7 @@ export const useGameLogic = ({
                     const newGlobalScore = scores[userId] || 0;
                     if (newGlobalScore !== globalScore) {
                         setGlobalScore(newGlobalScore);
-                        setLocalScore(0); // Đồng bộ `localScore` với Firebase
+                        setLocalScore(0); 
                     }
                 }
             });
@@ -76,8 +76,7 @@ export const useGameLogic = ({
 
     const handleGameEnd = async () => {
         try {
-                
-            // Giao dịch để cập nhật trạng thái isGameFinished
+
             await firestore().runTransaction(async (transaction) => {
                 const roomRef = firestore().collection('gameRooms').doc(roomId);
                 const roomDoc = await transaction.get(roomRef);
@@ -94,10 +93,8 @@ export const useGameLogic = ({
                     console.log('Both players have completed the game!');
                 }
             });
-            // Tắt trạng thái game đang hoạt động
             setIsGameActive(false);
     
-            // Ghi điểm cuối cùng nếu còn điểm
             if (localScore > 0) {
                 await firestore()
                     .collection('gameRooms')
@@ -106,11 +103,9 @@ export const useGameLogic = ({
                         [`scores.${userId}`]: firestore.FieldValue.increment(localScore),
                     });
                 console.log(`Final score submitted for user ${userId}: ${localScore}`);
-                setLocalScore(0); // Reset điểm sau khi ghi
+                setLocalScore(0);
             }
 
-    
-            // Điều hướng sau khi hoàn tất cập nhật
             navigation.replace('Result', { roomId, game });
         } catch (error) {
             console.error('Error ending game:', error);

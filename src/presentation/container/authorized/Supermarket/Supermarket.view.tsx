@@ -74,14 +74,14 @@ const _Supermarket: React.FC = () => {
     }
   ) => {
     const { phieu_100k, phieu_50k } = redemptionData;
-  
+
     if (phieu_100k.quantity <= 0 && phieu_50k.quantity <= 0) {
       console.log('Không có phiếu nào được đổi.');
       return;
     }
-  
+
     const promises = [];
-  
+
     if (phieu_100k.quantity > 0) {
       promises.push(
         dispatch(
@@ -94,7 +94,7 @@ const _Supermarket: React.FC = () => {
         ).unwrap()
       );
     }
-  
+
     if (phieu_50k.quantity > 0) {
       promises.push(
         dispatch(
@@ -107,8 +107,7 @@ const _Supermarket: React.FC = () => {
         ).unwrap()
       );
     }
-  
-    // Chờ tất cả các lời gọi API hoàn thành
+
     Promise.all(promises)
       .then(() => {
         console.log('Đổi thưởng thành công!');
@@ -117,11 +116,11 @@ const _Supermarket: React.FC = () => {
         console.error('Lỗi:', err);
       });
   };
-  
+
   const navigation = useNavigation()
   return (
     <ImageBackground source={BACKGROUND_MARKET} style={styles.background} resizeMode='stretch'>
-      <RoundBackButton containerStyle={styles.buttonBack} onPress={() => navigation.goBack()}/>
+      <RoundBackButton containerStyle={styles.buttonBack} onPress={() => navigation.goBack()} />
       <Text style={styles.headertext}>SIÊU THỊ PHỤ KIỆN</Text>
 
       <ImageBackground source={LABEL_MARKET} style={[styles.label, { top: scaleHeight(122) }]} resizeMode='stretch'>

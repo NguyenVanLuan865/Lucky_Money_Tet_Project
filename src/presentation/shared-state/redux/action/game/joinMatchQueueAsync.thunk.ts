@@ -3,7 +3,7 @@ import firestore from '@react-native-firebase/firestore';
 
 
 export const joinMatchQueueAsync = createAsyncThunk(
-    'matchQueue/join', // Đây là `type`
+    'matchQueue/join', 
     async (
       { userId, gameType }: { userId: string; gameType: string },
       { rejectWithValue }
@@ -27,8 +27,7 @@ export const joinMatchQueueAsync = createAsyncThunk(
           gameType,
           createdAt: firestore.FieldValue.serverTimestamp(),
         });
-  
-        // Trả về kết quả hợp lệ
+
         return { userId, gameType, name };
       } catch (error: any) {
         return rejectWithValue(error.message || 'Không thể tham gia hàng đợi.');

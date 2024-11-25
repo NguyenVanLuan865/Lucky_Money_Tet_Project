@@ -6,7 +6,6 @@ import { LacLocVang, LiXi, MaSoMayMan } from '../../domain';
 export class SubCollectionRepository {
   constructor(private userId: string) {}
 
-  // Lấy tất cả các item từ sub-collection `laclocvang`
   getLacLocVang(): Observable<LacLocVang[]> {
     return from(firestore().collection('users').doc(this.userId).collection('laclocvang').get()).pipe(
       map((querySnapshot) =>
@@ -18,7 +17,6 @@ export class SubCollectionRepository {
     );
   }
 
-  // Lấy tất cả các item từ sub-collection `lixi`
   getLiXi(): Observable<LiXi[]> {
     return from(firestore().collection('users').doc(this.userId).collection('lixi').get()).pipe(
       map((querySnapshot) =>
@@ -30,7 +28,6 @@ export class SubCollectionRepository {
     );
   }
 
-  // Lấy tất cả các item từ sub-collection `masomayman`
   getMaSoMayMan(): Observable<MaSoMayMan[]> {
     return from(firestore().collection('users').doc(this.userId).collection('masomayman').get()).pipe(
       map((querySnapshot) =>

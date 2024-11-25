@@ -29,7 +29,7 @@ const _Win: React.FC = ({ route }: any) => {
             });
 
             console.log('Đã cộng thêm 1 vào lixi thành công!');
-            navigation.replace('Rankings'); // Điều hướng đến màn hình chính
+            navigation.replace('Rankings'); /
         } catch (error) {
             console.error('Lỗi khi cập nhật lixi:', error);
             Alert.alert('Lỗi', 'Không thể cập nhật lì xì.');

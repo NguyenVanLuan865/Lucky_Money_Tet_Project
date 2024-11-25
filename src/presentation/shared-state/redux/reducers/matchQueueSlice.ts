@@ -53,5 +53,5 @@ const matchQueueSlice = createSlice({
   },
 });
 
-export const { resetMatchQueue, setOpponent } = matchQueueSlice.actions; // Export cả setOpponent
+export const { resetMatchQueue, setOpponent } = matchQueueSlice.actions; 
 export default matchQueueSlice.reducer;

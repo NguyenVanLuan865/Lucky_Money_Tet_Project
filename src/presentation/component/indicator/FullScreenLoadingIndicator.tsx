@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, StyleSheet, Modal, Animated, ActivityIndicator, Image } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../shared-state/redux/store'; // Thay bằng đường dẫn chính xác đến store của bạn
-import { resetSuccess } from '../../shared-state/redux/reducers/loadingSlice'; // Thay bằng đường dẫn đến slice của bạn
-import { ANIMATION_TICKED ,ICON_TICKED} from '../../../../assets'; // Thay bằng đường dẫn chính xác đến GIF ticked
+import { RootState } from '../../shared-state/redux/store'; 
+import { resetSuccess } from '../../shared-state/redux/reducers/loadingSlice'; 
+import { ANIMATION_TICKED ,ICON_TICKED} from '../../../../assets'; 
 
 const FullScreenLoadingIndicator: React.FC = () => {
   const { isLoading, message, isSuccess } = useSelector((state: RootState) => state.loading);
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 18,
     color: '#77cc00',
-    fontFamily: 'SVN-Cookies',
+    fontFamily: 'SVN-Cookiesk',
     elevation: 3,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },

@@ -91,8 +91,8 @@ const useGoldenFortune = () => {
 
     const handleShakeOnce = async (userId: string) => {
         try {
-            const reward = await randomAndProcessReward(userId); // Gọi hàm xử lý phần thưởng
-            const luckyCode = await randomAndProcessLuckyCode(); // Gọi hàm xử lý mã may mắn
+            const reward = await randomAndProcessReward(userId); 
+            const luckyCode = await randomAndProcessLuckyCode();
     
             if (!reward || !luckyCode) {
                 throw new Error('Không lấy được phần thưởng hoặc mã code');

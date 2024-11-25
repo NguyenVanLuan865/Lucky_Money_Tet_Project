@@ -38,24 +38,19 @@ const _Result: React.FC = ({ route }: any) => {
                     const data = roomDoc.data();
                     const scores = data?.scores || {};
 
-                    // Lấy điểm của người chơi hiện tại
                     const userScore = scores[userId!] || 0;
-
-                    // Lấy điểm của đối thủ
                     const opponentId = Object.keys(scores).find((id) => id !== userId);
                     const opponentScore = opponentId ? scores[opponentId] : 0;
 
                     console.log('Điểm của tôi:', userScore, 'ID:', userId);
                     console.log('Điểm của đối thủ:', opponentScore, 'ID:', opponentId);
 
-                    // Kiểm tra nếu game đã kết thúc
                     const isGameFinished = data?.isGameFinished || 0;
                     if (isGameFinished < 2) {
                         console.log('Game chưa kết thúc, tiếp tục chờ...');
                         return;
                     }
 
-                    // Nếu cả hai đã hoàn thành, so sánh điểm và điều hướng
                     dispatch(hideLoading(''));
                     if (userScore >= opponentScore) {
                         navigation.replace('Win', { userScore, opponentScore, roomId, userId , game});
@@ -70,12 +65,11 @@ const _Result: React.FC = ({ route }: any) => {
                 }
             );
 
-        // Cleanup listener khi component unmount
         return () => unsubscribe();
     }, [roomId, userId, navigation, dispatch]);
     const closeModal = () => {
         setIsModalVisible(false);
-        navigation.replace('Congress'); // Điều hướng về màn hình chính
+        navigation.replace('Congress');
     };
     return (
         <ImageBackground source={BACKGROUND_FINDOPPONENTS} style={styles.background} resizeMode="stretch">
